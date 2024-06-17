@@ -1,0 +1,23 @@
+!pip install wordcloud
+
+import matplotlib.pyplot as plt
+from japanmap import picture
+
+plt.rcParams["figure.figsize"] = (8,8)
+plt.imshow(picture())
+
+import matplotlib.pyplot as plt
+from japanmap import picture
+
+data = {
+    "北海道":(255,0,0),
+    "大阪":(0,255,0),
+    "広島":(0,0,255),
+    "東京":"Orange",
+    "三重":"Blue",
+    "沖縄":"Green"
+    }
+
+plt.rcParams["figure.figsize"] = (8,8)
+plt.imshow(picture(data))
+plt.savefig("japan_colormap.png")
